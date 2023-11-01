@@ -11,7 +11,7 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! How are you???"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -32,5 +32,3 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
-
