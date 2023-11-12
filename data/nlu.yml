@@ -1,4 +1,4 @@
-suggesversion: "3.1"
+version : "3.1"
 
 nlu:
 - intent: greet
@@ -89,3 +89,46 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    
+
+- intent: find_restaurant
+  examples: |
+    - Top restaurants?
+    - Find me the greatest restaurants.
+    - Which is the top restaurant
+   
+
+- intent: play_music
+  examples: |
+    - Play some music
+    - I want to listen to music
+    - Can you play a song?
+
+- intent: provide_music_genre
+  examples: |
+    - I'm in the mood for [pop](genre) music
+    - How about some [rock](genre) songs?
+    - I want to listen to [hip-hop](genre)
+    - How about [country](genre) music?
+    - I'm in the mood for [classical](genre) tunes
+    - Can you play some [jazz](genre) music?
+    - Play [indie](genre) songs for me
+    
+
+- intent: get_weather
+  examples: |
+    - What's the weather?
+    - Tell me the weather forecast.
+    - What's the temperature?
+    - Is it going to rain tomorrow?
+
+
+- intent: provide_weather
+  examples: |
+    - The weather in [New York](location)?
+    - What's the forecast for [Paris](location)?
+    - Tell me about the weather in [London](location).
+    - How's the weather in [Athens](location) right now?
+    - Weather update for [Sydney](location).
+    
+

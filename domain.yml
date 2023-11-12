@@ -8,26 +8,55 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - find_restaurant
+  - play_music
+  - provide_music_genre
+  - get_weather
+  - provide_weather
+
+entities:
+  - address
+  - genre
+  - location
 
 responses:
   utter_greet:
-  - text: "Hey! How are you???"
+    - text: "Hey! How are you???"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+    - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+    - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, powered by Rasa."
+
+
+  utter_ask_music_genre:
+    - text: "What type of music do you want to listen to?"
+
+
+  utter_ask_weather:
+    - text: "Sure, I can provide you with the current weather. Which location?"
+
+  utter_provide_restaurants:
+    - text: "Sure, I can provide you the top 10 restaurants in the world https://time.com/94414/best-restaurants-world/"
+
+
+actions:
+  - utter_greet
+  - utter_ask_music_genre
+  - action_search_youtube
+  - utter_ask_weather
+  - action_search_weather
 
 session_config:
   session_expiration_time: 60

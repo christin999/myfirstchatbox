@@ -28,3 +28,42 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+
+- story: find restaurant
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: find_restaurant
+  - action: utter_provide_restaurants
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: play music
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: play_music
+  - action: utter_ask_music_genre
+  - intent: provide_music_genre
+    entities:
+    - genre: "pop"
+  - action: action_search_youtube
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: get weather
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: get_weather
+  - action: utter_ask_weather
+  - intent: provide_weather
+    entities:
+    - location: "Thessaloniki"
+  - action: action_search_weather
+  - intent: goodbye
+  - action: utter_goodbye
+
