@@ -62,5 +62,4 @@ To handle chitchat and invalid inputs, the following changes were made:
 - Explanation: TEDPolicy handles context switches and generalizes well.
 
 ## Policy Optimization
-Experimentation with different policy hyperparameters, increased training data, and adjustments to policy weights were performed to find the optimal combination for the specific use case.
-
+Experiments were performed with different policy parameters, increased training data, and adjustments to the policy weights to find the best combination for the particular use case.
