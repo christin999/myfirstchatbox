@@ -1,0 +1,14 @@
+{
+  "pop": "pop",
+  "rock": "rock",
+  "hip-hop": "hip-hop",
+  "country": "country",
+  "classical": "classical",
+  "jazz": "jazz",
+  "indie": "indie",
+  "new york": "New York",
+  "paris": "Paris",
+  "london": "London",
+  "athens": "Athens",
+  "sydney": "Sydney"
+}

@@ -132,3 +132,10 @@ nlu:
     - Weather update for [Sydney](location).
     
 
+- intent: chitchat
+  examples: |
+    - How are you?
+    - Tell me a joke
+    - What's up?
+    - How's your day?
+    - Can we chat?

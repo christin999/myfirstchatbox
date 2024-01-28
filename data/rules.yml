@@ -11,3 +11,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Respond to chitchat
+  steps:
+    - intent: chitchat
+    - action: utter_chitchat

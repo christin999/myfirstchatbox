@@ -67,3 +67,21 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+- story: get weather with form
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: get_weather
+    - action: weather_form
+    - active_loop: weather_form
+    - slot_was_set:
+        - location: "Thessaloniki"
+    - action: action_search_weather
+    - intent: goodbye
+    - action: utter_goodbye
+
+
+- story: Chitchat Interaction
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat

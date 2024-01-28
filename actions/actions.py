@@ -2,7 +2,40 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+from rasa_sdk.forms import FormValidationAction
+
 action_server_url = "http://localhost:5055/webhook"
+
+
+class WeatherForm(FormValidationAction):
+    def name(self) -> Text:
+        return "weather_form"
+
+    def validate_location(
+        self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> Dict[Text, Any]:
+        if not value:
+            dispatcher.utter_message(text="Please provide a valid location.")
+            return {"location": None}
+        return {"location": value}
+
+    def validate_date(
+        self, value: Text, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> Dict[Text, Any]:
+        # Implement validation logic for date if needed
+        return {"date": value}
+
+    def submit(
+        self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]
+    ) -> List[Dict[Text, Any]]:
+        location = tracker.get_slot("location")
+        date = tracker.get_slot("date")
+
+        # Your logic to use location and date for weather information
+        weather_info = f"Fetching weather information for {location}"
+        dispatcher.utter_message(text=weather_info)
+
+        return []
 
 
 class ActionSearchYouTube(Action):
